@@ -7,23 +7,7 @@ fun main(args: Array<String>) {
     var sumaColum = Array(m[0].size){0}
 
 
-    for (f in m.indices){
-        for (c in m[f].indices){
-            print("${m[f][c]} ")
-        }
-        println()
-    }
-    var f: Int = 0
-    var c: Int = 0
-
-    while (f < m.size){
-        while (c < m[0].size){
-            sumaFilas[f] += m[f][c]
-            c++
-        }
-        c = 0
-        f++
-    }
+    extracted(m, sumaFilas)
 
     sumaColumnas(m,sumaColum)
     println("La suma de las filas es")
@@ -32,6 +16,26 @@ fun main(args: Array<String>) {
     println(Arrays.toString(sumaColum))
 
 
+}
+
+private fun extracted(m: Array<Array<Int>>, sumaFilas: Array<Int>) {
+    for (f in m.indices) {
+        for (c in m[f].indices) {
+            print("${m[f][c]} ")
+        }
+        println()
+    }
+    var f: Int = 0
+    var c: Int = 0
+
+    while (f < m.size) {
+        while (c < m[0].size) {
+            sumaFilas[f] += m[f][c]
+            c++
+        }
+        c = 0
+        f++
+    }
 }
 
 private fun ints(m: Array<Array<Int>>): Array<Int> {
