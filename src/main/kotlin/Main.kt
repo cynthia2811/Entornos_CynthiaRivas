@@ -56,4 +56,6 @@ fun sumaColumnas (m:Array<Array<Int>>, sumaColumnas:Array<Int>){
         f = 0
         c++
     }
+
+    print(sumaColumnas)
 }
