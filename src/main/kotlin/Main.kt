@@ -58,4 +58,10 @@ fun sumaColumnas (m:Array<Array<Int>>, sumaColumnas:Array<Int>){
     }
 
     print(sumaColumnas)
+    fun sumaNumeros(){
+        print("Escribe dos numeros")
+        var a = readln().toInt()
+        var b = readln().toInt()
+        var c = a+b
+    }
 }
